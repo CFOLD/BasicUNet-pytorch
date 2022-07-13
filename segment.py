@@ -59,7 +59,7 @@ def segment(args):
             mask = np.where(mask_tensor.permute(1,2,0) >= int(mask_thres*255), mask, 0)
             mask = mask[:,:,1] if model.n_classes == 2 else mask
             mask = Image.fromarray(mask)
-            mask.save(ROOT / 'runs' / (name[0][:-4]+'.jpg'), "JPEG")
+            mask.save(ROOT / 'runs' / (name[0][:-4]+'.png'), "PNG")
 
             
 
