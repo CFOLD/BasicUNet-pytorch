@@ -20,7 +20,7 @@ dir_checkpoint = Path('./checkpoints/')
 
 
 def train(args):
-    assert args.num_classes < 2, "The number of class must be at least 2, binary"
+    assert args.num_classes > 1, "The number of class must be at least 2, binary"
     epochs, batch_size, imgsz, lr, val_epoch = args.epochs, args.batch_size, args.imgsz, args.lr, args.val_epoch
     img_dir, mask_dir = os.path.join(args.dataset,'images'), os.path.join(args.dataset,'masks')
 
